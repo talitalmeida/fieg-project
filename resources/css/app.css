@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    --color-primary: #006CB5;
+    --color-bg:#EBF0F9;
+    --colo-bg-card: #EBF1FA;
+    --colo-text: #455A64;
+}
+
+.btn {
+    flex-shrink: 0;
+    border-radius: 20px;
+    font-family: Montserrat,serif;
+    font-style: normal;
+    font-weight: 500;
+
+}
+.btn-blue {
+    @apply text-white;
+    background-color: var(--color-primary);
+}
+.btn-blue:hover {
+    @apply bg-blue-700;
+}
