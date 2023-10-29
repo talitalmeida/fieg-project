@@ -31,6 +31,7 @@ import { Link } from '@inertiajs/vue3';
 }
 
 .bg-login{
-    background-image: url("assets/images/bg-item.svg");
+    background-image: url("/assets/images/bg-item.svg");
+    background-color: var(--color-bg-login);
 }
 </style>

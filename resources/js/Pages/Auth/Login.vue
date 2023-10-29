@@ -47,7 +47,7 @@ const submit = () => {
                     <input required autocomplete="current-email"
                            v-model="form.email" type="email"
                            id="email"
-                           class=" bg-text-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email">
+                           class="bg-transparent bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Email">
                 </div>
 
                 <InputError class="mt-2" :message="form.errors.email" />
@@ -62,7 +62,7 @@ const submit = () => {
                     <input required autocomplete="current-password"
                            v-model="form.password" type="password"
                            id="password"
-                           class=" bg-text-input bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Senha">
+                           class="bg-transparent bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Senha">
                 </div>
 
                 <InputError class="mt-2" :message="form.errors.password" />
@@ -70,7 +70,7 @@ const submit = () => {
 
             <div class="block mt-4">
                 <label class="flex items-center">
-                    <Checkbox name="remember" v-model:checked="form.remember" />
+                    <Checkbox class="rounded-full " name="remember" v-model:checked="form.remember" />
                     <span class="ml-2 text-sm text-gray-600">Lembrar de mim</span>
                 </label>
             </div>
@@ -93,11 +93,6 @@ const submit = () => {
 </template>
 
 <style scoped>
-.bg-text-input{
-    background-color: transparent;
-//border-radius: 10px;
-//border: 2px solid rgba(0, 0, 0, 0.10);
-}
 .title{
     padding: 50px 0;
     color: var(--colo-text);
