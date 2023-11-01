@@ -2,12 +2,6 @@
 import NavBar from "@/Components/NavBar.vue";
 import {Head} from "@inertiajs/vue3";
 import TheFooter from "@/Components/TheFooter.vue";
-
-defineProps({
-    showMenu:{
-        type:Boolean
-    }
-})
 </script>
 
 <template>

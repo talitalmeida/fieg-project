@@ -1,19 +1,13 @@
 <script setup>
 import {ArrowRightOnRectangleIcon} from '@heroicons/vue/24/outline'
-import Sidebar from "@/Components/Sidebar.vue";
 import ApplicationLogo from "@/Components/ApplicationLogo.vue";
-import {ref} from "vue";
-import {RectangleGroupIcon} from "@heroicons/vue/24/outline/index.js";
+import {Link} from "@inertiajs/vue3";
 
-let stateSidebar = ref(true)
 
-function openCloseSidebar(){
-    stateSidebar.value = !stateSidebar.value
-}
 </script>
 <template>
     <div class="sticky top-0 z-40">
-        <div class="w-full h-20 px-6 bg-white border-b flex items-center justify-between">
+        <div class="w-full h-20 px-6 bg-white border-b flex items-center justify-between shadow shadow-blue-100">
 
             <!-- left navbar -->
             <div class="flex ">
@@ -22,11 +16,11 @@ function openCloseSidebar(){
                 </div>
 
                 <!-- mobile hamburger -->
-                <div class="lg:hidden flex items-center ml-4  ">
-                    <button class="hover:text-blue-500 hover:border-white focus:outline-none navbar-burger" @click="openCloseSidebar">
-                        <svg class="h-5 w-5" v-bind:style="{ fill: 'black' }" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-                    </button>
-                </div>
+<!--                <div class="lg:hidden flex items-center ml-4  ">-->
+<!--                    <button class="hover:text-blue-500 hover:border-white focus:outline-none navbar-burger" @click="openCloseSidebar">-->
+<!--                        <svg class="h-5 w-5" v-bind:style="{ fill: 'black' }" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>-->
+<!--                    </button>-->
+<!--                </div>-->
 
             </div>
 
@@ -36,18 +30,19 @@ function openCloseSidebar(){
             <div class="flex items-center relative">
                 <ul :class="showMenu ? 'flex' : 'hidden'" class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0 mr-20">
                     <li class="menu-link  hover:text-blue-400">
-                        <a href="#">Início</a>
+                        <a href="/">Início</a>
                     </li>
                     <li class="menu-link   hover:text-blue-400">
                         <a href="#">Contato</a>
                     </li>
                     <li class="menu-link  hover:text-blue-400">
-                        <a href="#">sobre</a>
+                        <a href="#">Sobre</a>
                     </li>
                     <li>
-                        <a href="/logout" class="flex">Sair
+                        <Link :href="route('logout')" method="post" class="flex">
+                            Sair
                             <ArrowRightOnRectangleIcon class="h-6 w-6"/>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -61,7 +56,6 @@ function openCloseSidebar(){
             <a href="#" class="block px-4 py-2 hover:bg-gray-200">Logout</a>
         </div>
         <!-- dropdown menu end -->
-        <Sidebar :dataStateSidebar="stateSidebar" :clickCloseSideBar="openCloseSidebar"/>
     </div>
 </template>
 

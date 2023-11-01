@@ -1,10 +1,13 @@
 <script setup>
-import Sidebar from "@/Components/Sidebar.vue";
-import Navbar from "@/Components/AuthNavBar.vue";
 import {Head} from "@inertiajs/vue3";
+import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
+
+
 </script>
 
 <template>
-    <Head title="Dashboard" />
-        <Navbar/>
+        <Head title="Dashboard" />
+        <AuthenticatedLayout>
+            dad
+        </AuthenticatedLayout>
 </template>

@@ -19,6 +19,7 @@ export default {
                 transparent: 'transparent',
                 current: 'currentColor',
                 primary: "#006CB5",
+                back: "#EBF0F9"
             },
             textColor:{
                 primary: '#455A64',
